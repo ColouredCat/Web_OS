@@ -1,13 +1,8 @@
 
-const time_text = document.getElementById("time-text");
-const update_time = 1000;
-
 function setTime(){
     const time = new Date().toLocaleString();
-    time_text.innerHTML = time;
+    document.getElementById("time-text").innerHTML = time;
 }
-
-setInterval(setTime, update_time);
 
 function dragElement(element){
     var initialX = 0;
@@ -15,10 +10,14 @@ function dragElement(element){
     var currentX = 0;
     var currentY = 0;
 
-    if (document.getElementById(element.id + "-header")) {
-        document.getElementById(element.id + "-header").onmousedown = startDragging;
+    const header = document.getElementById(element.id + "-header");
+
+    if (header) {
+        header.onmousedown = startDragging;
+        header.ontouchstart = startDragging;
     } else {
         element.onmousedown = startDragging;
+        element.ontouchstart = startDragging;
     }
 
     function startDragging(e){
@@ -26,18 +25,22 @@ function dragElement(element){
         e.preventDefault();
         initialX = e.clientX;
         initialY = e.clientY;
+
         document.onmouseup = stopDragging;
         document.onmousemove = dragElement;
-        console.log("drag");
+        document.ontouchend = stopDragging;
+        document.ontouchmove = dragElement;
     }
 
     function dragElement(e) {
         e = e || window.event;
         e.preventDefault();
+
         currentX = initialX - e.clientX;
         currentY = initialY - e.clientY;
         initialX = e.clientX;
         initialY = e.clientY;
+
         element.style.top = (element.offsetTop - currentY) + "px";
         element.style.left = (element.offsetLeft - currentX) + "px";
     }
@@ -45,18 +48,29 @@ function dragElement(element){
     function stopDragging() {
         document.onmouseup = null;
         document.onmousemove = null;
+        document.ontouchend = null;
+        document.ontouchmove = null;
     }
 }
 
 function createWindow(element){
     dragElement(element);
+
     const button = document.getElementById(element.id + "-button");
     button.onclick = closeWindow;
+    button.ontouchstart = closeWindow;
 
-    function closeWindow(e){
+    const icon = document.getElementById(element.id + "-icon");
+    icon.onmousedown = openWindow;
+    icon.ontouchstart = openWindow;
+
+    function closeWindow(){
         element.style.display = "none";
+    }
+    function openWindow(){
+        element.style.display = "inline";
     }
 }
 
 createWindow(document.getElementById("welcome-window"))
-
+setInterval(setTime, 1000);

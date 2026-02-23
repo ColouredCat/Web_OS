@@ -5,6 +5,7 @@ body{
     background-image: url(background.png);
     background-size: cover;
 }
+
 .window{
     border: 2px solid black;
     border-radius: 8px;
@@ -15,10 +16,17 @@ body{
     margin: 2px;
     padding: 4px;
     text-align: center;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.icon{
+    width: 96x;
+    height: 96px;
+    border: 2px solid black;
+    position: absolute;
+    text-align:center;
+}
+
 .header{
     display: flex;
     width: 256px;
@@ -26,6 +34,7 @@ body{
     justify-content: space-between;
     background-color: rgb(200, 200, 200);
 }
+
 .header-button{
     background-color: rgb(255, 86, 86);
     width: 16px;
@@ -34,6 +43,7 @@ body{
     border-radius: 16px;
     margin: 8px;
 }
+
 .top-bar{
     display: flex;
     color: white;
