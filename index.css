@@ -1,8 +1,10 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: larger;
-    background-image: url(background.png);
+    background-image: url(backgrounds/view.jpg);
     background-size: cover;
 }
 
@@ -10,26 +12,26 @@ body{
     border: 2px solid black;
     border-radius: 8px;
     position: absolute;
-    width: 256px;
-    height: 480px;
     background-color: rgb(221, 221, 221);
+    color: black;
     margin: 2px;
     padding: 4px;
     text-align: center;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .icon{
-    width: 96x;
+    width: 96px;
     height: 96px;
     border: 2px solid black;
     position: absolute;
     text-align:center;
+    z-index: 0;
 }
 
 .header{
     display: flex;
-    width: 256px;
     height: 32px;
     justify-content: space-between;
     background-color: rgb(200, 200, 200);
