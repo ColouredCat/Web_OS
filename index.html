@@ -9,16 +9,15 @@
         </div>
 
         <div id="welcome-window-icon" class="icon" style="top: 30%; left: 50%;"><p>Welcome</p></div>
-        <div class="window" id="welcome-window" style="top: 50%; left: 50%; width: 256px; height: 256px;">
+        <div class="window" id="welcome-window" style="top: 50%; left: 50%; width: 256px; height: 312px;">
             <div id="welcome-window-header" class="header">
                 <button class="header-button" id="welcome-window-button"></button>
             </div>
             <h3>Welcome!</h3>
             <p>This is my website for the flavourtown WebOS side quest.</p>
-            <a href="https://flavortown.hackclub.com/projects/14019">Flavortown</a>
-            <br>
-            <a href="https://github.com/ColouredCat/Web_OS">Github</a>
-            <br>
+            <i>By ColouredCat</i><br>
+            <a href="https://flavortown.hackclub.com/projects/14019">Flavortown</a><br>
+            <a href="https://github.com/ColouredCat/Web_OS">Github</a><br>
         </div>
 
         <div id="customise-window-icon" class="icon" style="top: 40%; left: 20%;"><p>Personalisation</p></div>
@@ -42,12 +41,26 @@
                 <input type="radio" id="customize-fc" name="font"checked>Font 3</input><br>
                 <br>
 
-                <label><b>Window transparency:</b></label><br><br>
-                <input type="range" id="customise-trans">
+                <label><b>Font weight:</b></label><br><br>
+                <input type="range" id="customize-weight" min="300" max="700">
                 <br>
             </form>
 
             <script src="apps/customise.js"></script>
+        </div>
+
+        <div id="system-window-icon" class="icon" style="top: 30%; left: 50%;"><p>Welcome</p></div>
+        <div class="window" id="system-window" style="top: 50%; left: 50%; width: 312px; height: 480px;">
+            <div id="system-window-header" class="header">
+                <button class="header-button" id="system-window-button"></button>
+            </div>
+            <h3>System Information</h3>
+            <p id="platform"></p>
+            <p id="memory"></p>
+            <p id="storage"></p>
+            <p id="browser"></p>
+            <p id="language"></p>
+            <script src="apps/system.js"></script>
         </div>
 
         <script src="index.js"></script>

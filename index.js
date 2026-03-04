@@ -75,4 +75,5 @@ function createWindow(element){
 document.body.onload = setTime();
 createWindow(document.getElementById("welcome-window"));
 createWindow(document.getElementById("customise-window"));
+createWindow(document.getElementById("system-window"));
 setInterval(setTime, 1000);

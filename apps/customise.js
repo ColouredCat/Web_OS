@@ -1,16 +1,16 @@
 
 function applyChanges(){
     if (document.getElementById("customize-abstract").checked){
-        document.body.style.backgroundImage = "url(backgrounds/abstract.jpg)";
+        document.body.style.backgroundImage = "url(backgrounds/abstract.webp)";
         document.body.style.color = "black";
     } else if (document.getElementById("customize-galaxy").checked){
-        document.body.style.backgroundImage = "url(backgrounds/galaxy.jpg)";
+        document.body.style.backgroundImage = "url(backgrounds/galaxy.webp)";
         document.body.style.color = "white";
     } else if (document.getElementById("customize-mountain").checked){
-        document.body.style.backgroundImage = "url(backgrounds/mountain.jpg)";
+        document.body.style.backgroundImage = "url(backgrounds/mountain.webp)";
         document.body.style.color = "white";
     } else if (document.getElementById("customize-view").checked){
-        document.body.style.backgroundImage = "url(backgrounds/view.jpg)";
+        document.body.style.backgroundImage = "url(backgrounds/view.webp)";
         document.body.style.color = "black";
     }
 
@@ -22,7 +22,7 @@ function applyChanges(){
         document.body.style.fontFamily = "\"Raleway\", sans-serif";
     }
 
-    document
+    document.body.style.fontWeight = document.getElementById("customize-weight").value;
 }
 
 document.getElementById("customise").oninput = applyChanges();

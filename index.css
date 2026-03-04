@@ -4,8 +4,9 @@
 body{
     font-family: "Raleway", sans-serif;
     font-size: larger;
-    background-image: url(backgrounds/view.jpg);
+    background-image: url(backgrounds/view.webp);
     background-size: cover;
+    font-weight: 400;
 }
 
 .window{
