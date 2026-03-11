@@ -23,12 +23,13 @@ body{
 }
 
 .icon{
-    width: 96px;
-    height: 96px;
+    width: 128px;
+    height: 128px;
     border: 2px solid black;
     position: absolute;
     text-align:center;
     z-index: 0;
+    top: 15%;
 }
 
 .header{
@@ -57,4 +58,19 @@ body{
     justify-content: center;
     transform: translate(-0.5%, -5%);
     border-radius: 30px;
+}
+
+.bottom-bar{
+    height: 50px; 
+    width: 600px;
+    justify-content: space-around; 
+    position:relative; 
+    font-size: smaller;
+    display: flex;
+}
+
+.canvas{
+    background-color: white;
+    border-radius: 12px;
+    margin-top: 2px;
 }

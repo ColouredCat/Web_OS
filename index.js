@@ -14,10 +14,10 @@ function dragElement(element){
 
     if (header) {
         header.onmousedown = startDragging;
-        header.ontouchstart = startDragging;
+        //header.ontouchstart = startDragging;
     } else {
         element.onmousedown = startDragging;
-        element.ontouchstart = startDragging;
+        //element.ontouchstart = startDragging;
     }
 
     function startDragging(e){
@@ -28,8 +28,8 @@ function dragElement(element){
 
         document.onmouseup = stopDragging;
         document.onmousemove = dragElement;
-        document.ontouchend = stopDragging;
-        document.ontouchmove = dragElement;
+        //document.ontouchend = stopDragging;
+        //document.ontouchmove = dragElement;
     }
 
     function dragElement(e) {
@@ -48,8 +48,8 @@ function dragElement(element){
     function stopDragging() {
         document.onmouseup = null;
         document.onmousemove = null;
-        document.ontouchend = null;
-        document.ontouchmove = null;
+        //document.ontouchend = null;
+        //document.ontouchmove = null;
     }
 }
 
@@ -58,11 +58,11 @@ function createWindow(element){
 
     const button = document.getElementById(element.id + "-button");
     button.onclick = closeWindow;
-    button.ontouchstart = closeWindow;
+    //button.ontouchstart = closeWindow;
 
     const icon = document.getElementById(element.id + "-icon");
     icon.onmousedown = openWindow;
-    icon.ontouchstart = openWindow;
+    //icon.ontouchstart = openWindow;
 
     function closeWindow(){
         element.style.display = "none";
@@ -76,4 +76,5 @@ document.body.onload = setTime();
 createWindow(document.getElementById("welcome-window"));
 createWindow(document.getElementById("customise-window"));
 createWindow(document.getElementById("system-window"));
+createWindow(document.getElementById("paint-window"));
 setInterval(setTime, 1000);
