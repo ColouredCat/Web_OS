@@ -23,9 +23,8 @@ body{
 }
 
 .icon{
-    width: 128px;
-    height: 128px;
-    border: 2px solid black;
+    width: 96px;
+    height: 96px;
     position: absolute;
     text-align:center;
     z-index: 0;
