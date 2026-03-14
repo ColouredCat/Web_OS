@@ -22,12 +22,10 @@ function stopPaint(e){
     painting = false;
 }
 function changePaint(e){
-    if (size != 1 && size != 12){
-        if (e.key == "."){
-            size++;
-        } else if (e.key == ","){
-            size--;
-        }
+    if (e.key == "." && size != 12){
+        size++;
+    } else if (e.key == "," && size != 1){
+        size--;
     }
     if (e.key == "a"){
         colour--;
